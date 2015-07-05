@@ -1,16 +1,19 @@
 var style = {
+
   tableContent: {
-    border: "1px solid black"
+    border: "0px solid black"
   },
   tableStyle: {
-    border: "2px solid black"
+    border: "0px solid black"
   },
-  checkedTodo: {
-    textDecoration: "line-through"
+  checkedGuest: {
+    textDecoration: "line-through",
+    backgroundColor: "blue"
   },
-  notCheckedTodo: {
+  notCheckedGuest: {
     textDecoration: "none"
   }
+
 };
 
 module.exports = style;

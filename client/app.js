@@ -1,5 +1,5 @@
 var React = require('react');
-var TodoBox = require('../app/components/TodoBox.jsx');
+var BirthdayContentPage = require('../app/components/BirthdayContentPage.jsx');
 
-var data = JSON.parse(document.getElementById('initial-data').getAttribute('data-json'));
-React.render(<TodoBox data={data} />, document.getElementById("app"));
+var guestList = JSON.parse(document.getElementById('initial-data').getAttribute('data-json'));
+React.render(<BirthdayContentPage guestList={guestList} />, document.getElementById("app"));

@@ -13,7 +13,7 @@ var body = DOM.body;
 var script = DOM.script;
 
 
-var TodoBox = require('../app/components/TodoBox.jsx');
+var BirthdayContentPage = require('../app/components/BirthdayContentPage.jsx');
 
 // Create a server with a host and port
 var server = new Hapi.Server();
@@ -32,9 +32,9 @@ server.views({
 });
 
 // write below
-var data = [];
-data.push({title: "Shopping", detail: process.argv[3]});
-data.push({title: "Hair cut", detail: process.argv[4]});
+var guestList = [];
+guestList.push({name: "Daniela Borges", brings: "Champanhe"});
+guestList.push({name: "Sérgio Ramos", brings: "Cake"});
 
 server.route({
   method: 'GET',
@@ -54,8 +54,8 @@ server.route({
   method: 'GET',
   path:'/',
   handler: function (request, reply) {
-    var initialData = JSON.stringify(data);
-    var markup = React.renderToString(React.createElement(TodoBox, {data: data}));
+    var initialData = JSON.stringify(guestList);
+    var markup = React.renderToString(React.createElement(BirthdayContentPage, {guestList: guestList}));
 
     var html = React.renderToStaticMarkup(body(null,
       div({id: 'app', dangerouslySetInnerHTML: {__html: markup}}),
@@ -72,6 +72,5 @@ server.route({
 
 // Start the server
 server.start(function(){
-
   console.info("Server started at", server.info.uri);
 });
