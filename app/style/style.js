@@ -1,17 +1,16 @@
 var style = {
-
   tableContent: {
-    border: "0px solid black"
+    border: '0px solid black'
   },
   tableStyle: {
-    border: "0px solid black"
+    border: '0px solid black'
   },
   checkedGuest: {
-    textDecoration: "line-through",
-    backgroundColor: "blue"
+    textDecoration: 'line-through',
+    backgroundColor: 'blue'
   },
   notCheckedGuest: {
-    textDecoration: "none"
+    textDecoration: 'none'
   }
 
 };
